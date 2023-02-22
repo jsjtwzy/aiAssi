@@ -10,9 +10,12 @@ def denseVectorDotProduct(v1, v2):
     You might find it useful to use sum(), and zip() and a list comprehension.
     """
     # BEGIN_YOUR_ANSWER (our solution is 1 lines of code, but don't worry if you deviate from this)
-    raise NotImplementedError
+    try:
+        res = sum(v1c *v2c for v1c, v2c in zip(v1, v2))
+    except:
+        raise NotImplementedError
+    return res
     # END_YOUR_ANSWER
-
 ############################################################
 # Problem 1b
 def incrementDenseVector(v1, scale, v2):
