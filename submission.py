@@ -16,6 +16,7 @@ def denseVectorDotProduct(v1, v2):
         raise NotImplementedError
     return res
     # END_YOUR_ANSWER
+
 ############################################################
 # Problem 1b
 def incrementDenseVector(v1, scale, v2):
@@ -23,7 +24,12 @@ def incrementDenseVector(v1, scale, v2):
     Given two dense vectors |v1| and |v2| and float scalar value scale, return v = v1 + scale * v2.
     """
     # BEGIN_YOUR_ANSWER (our solution is 1 lines of code, but don't worry if you deviate from this)
-    raise NotImplementedError
+    try:
+        add2 = list(scale *v2c for v2c in v2)
+        res = [v1c +add2c for v1c, add2c in zip(v1, add2)]
+    except:
+        raise NotImplementedError
+    return res
     # END_YOUR_ANSWER
 
 ############################################################
