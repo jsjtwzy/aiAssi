@@ -46,7 +46,15 @@ def dense2sparseVector(v):
     
     You might find it useful to use enumerate().
     """
-    raise NotImplementedError
+    try:
+        vCopy = enumerate(v)
+        res = collections.defaultdict(float)
+        for vKey, vValue in vCopy:
+            if not vValue == 0:
+                res[vKey] = vValue
+    except:
+        raise NotImplementedError
+    return res
 
 ############################################################
 # Problem 1d
