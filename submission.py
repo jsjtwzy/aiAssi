@@ -26,7 +26,7 @@ def incrementDenseVector(v1, scale, v2):
     # BEGIN_YOUR_ANSWER (our solution is 1 lines of code, but don't worry if you deviate from this)
     try:
         add2 = list(scale *v2c for v2c in v2)
-        res = [v1c +add2c for v1c, add2c in zip(v1, add2)]
+        res = v1.__class__(v1c +add2c for v1c, add2c in zip(v1, add2))
     except:
         raise NotImplementedError
     return res
