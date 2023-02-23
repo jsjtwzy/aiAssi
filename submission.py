@@ -89,9 +89,7 @@ def incrementSparseVector(v1, scale, v2):
         raise NotImplementedError
     return res
     # END_YOUR_ANSWER
-v1 = collections.defaultdict(float,{1:3,2:4,5:8})
-v2 = collections.defaultdict(float,{1:3,3:4,6:8})
-print(incrementSparseVector(v1, 2, v2))
+
 ############################################################
 # Problem 2a
 def minkowskiDistance(loc1, loc2, p = math.inf): 
