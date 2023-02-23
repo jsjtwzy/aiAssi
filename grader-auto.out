@@ -89,26 +89,15 @@ parts:
   extraCredit: false
   maxPoints: 1
   maxSeconds: 5
-  messages:
-  - 'Exception thrown: <class ''NotImplementedError''> -- '
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 149, in test\n    grader.requireIsEqual(3,\
-    \ submission.minkowskiDistance((0, 1), (2, 4)))\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 126, in minkowskiDistance\n\
-    \    raise NotImplementedError\n"
+  messages: []
   name: 2a-0-basic
-  points: 0
+  points: 1
   seconds: 0
 - description: ''
   extraCredit: false
   maxPoints: 1
   maxSeconds: 5
-  messages:
-  - 'Exception thrown: <class ''NotImplementedError''> -- '
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 174, in test\n    all(get_gen())\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 162, in get_gen\n    pred\
-    \ = submission.minkowskiDistance(x, y, p)\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 126, in minkowskiDistance\n\
-    \    raise NotImplementedError\n"
+  messages: []
   name: 2a-1-hidden
   points: 0
   seconds: 0
@@ -116,57 +105,32 @@ parts:
   extraCredit: false
   maxPoints: 1
   maxSeconds: 5
-  messages:
-  - 'Exception thrown: <class ''NotImplementedError''> -- '
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 180, in test\n    grader.requireIsEqual('longest',\
-    \ submission.getLongestWord('which is the longest word'))\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 148, in getLongestWord\n\
-    \    raise NotImplementedError\n"
+  messages: []
   name: 2b-0-basic
-  points: 0
+  points: 1
   seconds: 0
 - description: ''
   extraCredit: false
   maxPoints: 1
   maxSeconds: 5
-  messages:
-  - 'Exception thrown: <class ''NotImplementedError''> -- '
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 198, in test\n    all(get_gen())\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 192, in get_gen\n    pred\
-    \ = submission.getLongestWord(text)\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 148, in getLongestWord\n\
-    \    raise NotImplementedError\n"
+  messages: []
   name: 2b-1-hidden
   points: 0
-  seconds: 0
+  seconds: 1
 - description: ''
   extraCredit: false
   maxPoints: 1
   maxSeconds: 5
-  messages:
-  - 'Exception thrown: <class ''NotImplementedError''> -- '
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 205, in test\n    grader.requireIsEqual({'the',\
-    \ 'fox'}, submission.getFrequentWords('the quick brown fox jumps over the lazy\
-    \ fox',2))\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 159, in getFrequentWords\n\
-    \    raise NotImplementedError\n"
+  messages: []
   name: 2c-0-basic
-  points: 0
+  points: 1
   seconds: 0
 - description: ''
   extraCredit: false
   maxPoints: 1
   maxSeconds: 5
-  messages:
-  - 'Exception thrown: <class ''NotImplementedError''> -- '
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 220, in <lambda>\n    grader.addHiddenPart('2c-1-hidden',\
-    \ lambda : test(10000, 100), 1)\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 219, in test\n    all(get_gen())\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 213, in get_gen\n    pred\
-    \ = submission.getFrequentWords(text,freq)\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 159, in getFrequentWords\n\
-    \    raise NotImplementedError\n"
+  messages: []
   name: 2c-1-hidden
   points: 0
   seconds: 0
-totalPoints: 5
+totalPoints: 8

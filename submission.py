@@ -25,8 +25,7 @@ def incrementDenseVector(v1, scale, v2):
     """
     # BEGIN_YOUR_ANSWER (our solution is 1 lines of code, but don't worry if you deviate from this)
     try:
-        add2 = list(scale *v2c for v2c in v2)
-        res = tuple(v1c +add2c for v1c, add2c in zip(v1, add2))
+        res = tuple(v1c +scale *v2c for v1c, v2c in zip(v1, v2))
     except:
         raise NotImplementedError
     return res
@@ -121,7 +120,15 @@ def minkowskiDistance(loc1, loc2, p = math.inf):
     
     """
     # BEGIN_YOUR_ANSWER (our solution is 4 lines of code, but don't worry if you deviate from this)
-    raise NotImplementedError
+    try:
+        if p == math.inf:
+            res = max(abs(loc1c-loc2c) for loc1c, loc2c in zip(loc1, loc2))
+        else:
+            prod = sum(abs(loc1c-loc2c) **p for loc1c, loc2c in zip(loc1, loc2))
+            res = prod **(1/p)
+    except:
+        raise NotImplementedError
+    return res
     # END_YOUR_ANSWER
 
 ############################################################
@@ -143,7 +150,13 @@ def getLongestWord(text):
     """
 
     # BEGIN_YOUR_ANSWER (our solution is 4 line of code, but don't worry if you deviate from this)
-    raise NotImplementedError
+    try:
+        words = text.split(' ')
+        words.sort()
+        res = max(words, key=len)
+    except:
+        raise NotImplementedError
+    return res
     # END_YOUR_ANSWER
 
 ############################################################
@@ -154,5 +167,14 @@ def getFrequentWords(text, freq):
     and returns a set of words that appear at a given frequency |freq|.
     """
     # BEGIN_YOUR_ANSWER (our solution is 3 lines of code, but don't worry if you deviate from this)
-    raise NotImplementedError
-    # END_YOUR_ANSWER 
+    try:
+        words = text.split(' ')
+        wordset = set(words)
+        res = set()
+        for word in wordset:
+            if words.count(word) == freq:
+                res.add(word)
+    except:
+        raise NotImplementedError
+    return res
+    # END_YOUR_ANSWER
