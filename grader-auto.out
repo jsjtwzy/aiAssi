@@ -33,13 +33,7 @@ parts:
   extraCredit: false
   maxPoints: 1
   maxSeconds: 5
-  messages:
-  - 'Exception thrown: <class ''NotImplementedError''> -- '
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 57, in test\n    all(get_gen())\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 51, in get_gen\n    pred\
-    \ = submission.incrementDenseVector(v1, s, v2)\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 31, in incrementDenseVector\n\
-    \    raise NotImplementedError\n"
+  messages: []
   name: 1b-1-hidden
   points: 0
   seconds: 0
@@ -47,27 +41,15 @@ parts:
   extraCredit: false
   maxPoints: 1
   maxSeconds: 5
-  messages:
-  - 'Exception thrown: <class ''NotImplementedError''> -- '
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 63, in <lambda>\n    grader.addBasicPart('1c-0-basic',\
-    \ lambda : grader.requireIsEqual(collections.defaultdict(float, {0:1, 3:2}), submission.dense2sparseVector([1,0,0,2])),\
-    \ 1)\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 49, in dense2sparseVector\n\
-    \    raise NotImplementedError\n"
+  messages: []
   name: 1c-0-basic
-  points: 0
+  points: 1
   seconds: 0
 - description: ''
   extraCredit: false
   maxPoints: 1
   maxSeconds: 5
-  messages:
-  - 'Exception thrown: <class ''NotImplementedError''> -- '
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 76, in test\n    all(get_gen())\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 70, in get_gen\n    pred\
-    \ = submission.dense2sparseVector(v)\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 49, in dense2sparseVector\n\
-    \    raise NotImplementedError\n"
+  messages: []
   name: 1c-1-hidden
   points: 0
   seconds: 0
@@ -75,26 +57,15 @@ parts:
   extraCredit: false
   maxPoints: 1
   maxSeconds: 5
-  messages:
-  - 'Exception thrown: <class ''NotImplementedError''> -- '
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 85, in test\n    grader.requireIsEqual(15,\
-    \ submission.sparseVectorDotProduct(v1, v2))\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 61, in sparseVectorDotProduct\n\
-    \    raise NotImplementedError\n"
+  messages: []
   name: 1d-0-basic
-  points: 0
+  points: 1
   seconds: 0
 - description: ''
   extraCredit: false
   maxPoints: 1
   maxSeconds: 5
-  messages:
-  - 'Exception thrown: <class ''NotImplementedError''> -- '
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 107, in test\n    all(get_gen())\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 101, in get_gen\n    pred\
-    \ = submission.sparseVectorDotProduct(v1, v2)\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 61, in sparseVectorDotProduct\n\
-    \    raise NotImplementedError\n"
+  messages: []
   name: 1d-1-hidden
   points: 0
   seconds: 0
@@ -102,26 +73,15 @@ parts:
   extraCredit: false
   maxPoints: 1
   maxSeconds: 5
-  messages:
-  - 'Exception thrown: <class ''NotImplementedError''> -- '
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 125, in test\n    pred =\
-    \ submission.incrementSparseVector(v1, 2, v2)\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 72, in incrementSparseVector\n\
-    \    raise NotImplementedError\n"
+  messages: []
   name: 1e-0-basic
-  points: 0
+  points: 1
   seconds: 0
 - description: ''
   extraCredit: false
   maxPoints: 1
   maxSeconds: 5
-  messages:
-  - 'Exception thrown: <class ''NotImplementedError''> -- '
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 142, in test\n    all(get_gen())\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 136, in get_gen\n    pred\
-    \ = submission.incrementSparseVector(v1, s, v2)\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 72, in incrementSparseVector\n\
-    \    raise NotImplementedError\n"
+  messages: []
   name: 1e-1-hidden
   points: 0
   seconds: 0
@@ -133,7 +93,7 @@ parts:
   - 'Exception thrown: <class ''NotImplementedError''> -- '
   - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 149, in test\n    grader.requireIsEqual(3,\
     \ submission.minkowskiDistance((0, 1), (2, 4)))\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 106, in minkowskiDistance\n\
+  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 126, in minkowskiDistance\n\
     \    raise NotImplementedError\n"
   name: 2a-0-basic
   points: 0
@@ -145,9 +105,9 @@ parts:
   messages:
   - 'Exception thrown: <class ''NotImplementedError''> -- '
   - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 174, in test\n    all(get_gen())\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 164, in get_gen\n    pred\
-    \ = submission.minkowskiDistance(x, y)\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 106, in minkowskiDistance\n\
+  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 162, in get_gen\n    pred\
+    \ = submission.minkowskiDistance(x, y, p)\n"
+  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 126, in minkowskiDistance\n\
     \    raise NotImplementedError\n"
   name: 2a-1-hidden
   points: 0
@@ -160,7 +120,7 @@ parts:
   - 'Exception thrown: <class ''NotImplementedError''> -- '
   - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 180, in test\n    grader.requireIsEqual('longest',\
     \ submission.getLongestWord('which is the longest word'))\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 128, in getLongestWord\n\
+  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 148, in getLongestWord\n\
     \    raise NotImplementedError\n"
   name: 2b-0-basic
   points: 0
@@ -174,7 +134,7 @@ parts:
   - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 198, in test\n    all(get_gen())\n"
   - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 192, in get_gen\n    pred\
     \ = submission.getLongestWord(text)\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 128, in getLongestWord\n\
+  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 148, in getLongestWord\n\
     \    raise NotImplementedError\n"
   name: 2b-1-hidden
   points: 0
@@ -188,7 +148,7 @@ parts:
   - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 205, in test\n    grader.requireIsEqual({'the',\
     \ 'fox'}, submission.getFrequentWords('the quick brown fox jumps over the lazy\
     \ fox',2))\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 139, in getFrequentWords\n\
+  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 159, in getFrequentWords\n\
     \    raise NotImplementedError\n"
   name: 2c-0-basic
   points: 0
@@ -204,9 +164,9 @@ parts:
   - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 219, in test\n    all(get_gen())\n"
   - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 213, in get_gen\n    pred\
     \ = submission.getFrequentWords(text,freq)\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 139, in getFrequentWords\n\
+  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 159, in getFrequentWords\n\
     \    raise NotImplementedError\n"
   name: 2c-1-hidden
   points: 0
   seconds: 0
-totalPoints: 2
+totalPoints: 5

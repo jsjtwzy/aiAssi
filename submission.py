@@ -26,7 +26,7 @@ def incrementDenseVector(v1, scale, v2):
     # BEGIN_YOUR_ANSWER (our solution is 1 lines of code, but don't worry if you deviate from this)
     try:
         add2 = list(scale *v2c for v2c in v2)
-        res = v1.__class__(v1c +add2c for v1c, add2c in zip(v1, add2))
+        res = tuple(v1c +add2c for v1c, add2c in zip(v1, add2))
     except:
         raise NotImplementedError
     return res
@@ -66,7 +66,11 @@ def sparseVectorDotProduct(v1, v2):  # -> sparse vector product, dense vectoer p
     This function will be useful later for linear classifiers.
     """
     # BEGIN_YOUR_ANSWER (our solution is 1 lines of code, but don't worry if you deviate from this)
-    raise NotImplementedError
+    try:
+        res = sum((key in v2.keys()) *v1[key] *v2[key] for key in v1.keys())
+    except:
+        raise NotImplementedError
+    return res
     # END_YOUR_ANSWER
 
 ############################################################
@@ -77,9 +81,17 @@ def incrementSparseVector(v1, scale, v2):
     This function will be useful later for linear classifiers.
     """
     # BEGIN_YOUR_ANSWER (our solution is 4 lines of code, but don't worry if you deviate from this)
-    raise NotImplementedError
+    try:
+        res = collections.defaultdict(float,{})
+        for key in list(v1.keys()) +list(v2.keys()):
+            res[key] = v1[key] +scale *v2[key]
+    except:
+        raise NotImplementedError
+    return res
     # END_YOUR_ANSWER
-
+v1 = collections.defaultdict(float,{1:3,2:4,5:8})
+v2 = collections.defaultdict(float,{1:3,3:4,6:8})
+print(incrementSparseVector(v1, 2, v2))
 ############################################################
 # Problem 2a
 def minkowskiDistance(loc1, loc2, p = math.inf): 
