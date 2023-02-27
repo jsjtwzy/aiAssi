@@ -81,7 +81,7 @@ def incrementSparseVector(v1, scale, v2):
     """
     # BEGIN_YOUR_ANSWER (our solution is 4 lines of code, but don't worry if you deviate from this)
     try:
-        res = collections.defaultdict(float,{})
+        res = collections.defaultdict(float)
         for key in list(v1.keys()) +list(v2.keys()):
             res[key] = v1[key] +scale *v2[key]
     except:
@@ -124,8 +124,7 @@ def minkowskiDistance(loc1, loc2, p = math.inf):
         if p == math.inf:
             res = max(abs(loc1c-loc2c) for loc1c, loc2c in zip(loc1, loc2))
         else:
-            prod = sum(abs(loc1c-loc2c) **p for loc1c, loc2c in zip(loc1, loc2))
-            res = prod **(1/p)
+            res = sum(abs(loc1c-loc2c) **p for loc1c, loc2c in zip(loc1, loc2)) **(1/p)
     except:
         raise NotImplementedError
     return res
@@ -151,8 +150,7 @@ def getLongestWord(text):
 
     # BEGIN_YOUR_ANSWER (our solution is 4 line of code, but don't worry if you deviate from this)
     try:
-        words = text.split(' ')
-        words.sort()
+        words = sorted(text.split(' '))
         res = max(words, key=len)
     except:
         raise NotImplementedError
@@ -170,10 +168,7 @@ def getFrequentWords(text, freq):
     try:
         words = text.split(' ')
         wordset = set(words)
-        res = set()
-        for word in wordset:
-            if words.count(word) == freq:
-                res.add(word)
+        res = set(word for word in wordset if words.count(word) == freq)
     except:
         raise NotImplementedError
     return res
