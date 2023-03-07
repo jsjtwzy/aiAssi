@@ -1,7 +1,8 @@
 import collections
 import math
+import time
 
-SEED = 114514
+SEED = time.time()
 ############################################################
 # Problem 1a
 def denseVectorDotProduct(v1, v2):    
