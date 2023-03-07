@@ -1,6 +1,7 @@
 import collections
 import math
 
+SEED = 114514
 ############################################################
 # Problem 1a
 def denseVectorDotProduct(v1, v2):    
@@ -11,7 +12,7 @@ def denseVectorDotProduct(v1, v2):
     """
     # BEGIN_YOUR_ANSWER (our solution is 1 lines of code, but don't worry if you deviate from this)
     try:
-        res=sum(x*y for x,y in zip(v1, v2))
+        res = sum(v1c *v2c for v1c, v2c in zip(v1, v2))
     except:
         raise NotImplementedError
     return res
@@ -25,10 +26,10 @@ def incrementDenseVector(v1, scale, v2):
     """
     # BEGIN_YOUR_ANSWER (our solution is 1 lines of code, but don't worry if you deviate from this)
     try:
-        v =[ x + scale * y for x,y in zip(v1, v2)]
+        res = tuple(v1c +scale *v2c for v1c, v2c in zip(v1, v2))
     except:
         raise NotImplementedError
-    return v
+    return res
     # END_YOUR_ANSWER
 
 ############################################################
@@ -46,13 +47,14 @@ def dense2sparseVector(v):
     You might find it useful to use enumerate().
     """
     try:
-        v_sparse = collections.defaulydict(float)
-        for i, v_value in enumerate(v):
-            if v_value != 0:
-                v_sparse[i]=v_value
+        vCopy = enumerate(v)
+        res = collections.defaultdict(float)
+        for vKey, vValue in vCopy:
+            if not vValue == 0:
+                res[vKey] = vValue
     except:
         raise NotImplementedError
-    return v_sparse
+    return res
 
 ############################################################
 # Problem 1d
@@ -65,7 +67,7 @@ def sparseVectorDotProduct(v1, v2):  # -> sparse vector product, dense vectoer p
     """
     # BEGIN_YOUR_ANSWER (our solution is 1 lines of code, but don't worry if you deviate from this)
     try:
-        res = sum(v1[i] * v2[i] for i in v1 if i in v2)
+        res = sum((key in v2.keys()) *v1[key] *v2[key] for key in v1.keys())
     except:
         raise NotImplementedError
     return res
@@ -81,10 +83,8 @@ def incrementSparseVector(v1, scale, v2):
     # BEGIN_YOUR_ANSWER (our solution is 4 lines of code, but don't worry if you deviate from this)
     try:
         res = collections.defaultdict(float)
-        for key,value in v1.items():
-            res[key]+=value
-        for key,value in v2.items():
-            res[key]+=scale*value
+        for key in list(v1.keys()) +list(v2.keys()):
+            res[key] = v1[key] +scale *v2[key]
     except:
         raise NotImplementedError
     return res
@@ -123,12 +123,12 @@ def minkowskiDistance(loc1, loc2, p = math.inf):
     # BEGIN_YOUR_ANSWER (our solution is 4 lines of code, but don't worry if you deviate from this)
     try:
         if p == math.inf:
-            return max(abs(v1-v2) for v1,v2 in zip(loc1, loc2))
-        else :
-            return sum(abs(v1-v2)**p for v1,v2 in zip(loc1,loc2))**(1/p)
+            res = max(abs(loc1c-loc2c) for loc1c, loc2c in zip(loc1, loc2))
+        else:
+            res = sum(abs(loc1c-loc2c) **p for loc1c, loc2c in zip(loc1, loc2)) **(1/p)
     except:
         raise NotImplementedError
-    
+    return res
     # END_YOUR_ANSWER
 
 ############################################################
@@ -151,11 +151,11 @@ def getLongestWord(text):
 
     # BEGIN_YOUR_ANSWER (our solution is 4 line of code, but don't worry if you deviate from this)
     try:
-        words = text.split()
-        longest_word = max(words, key=len)
-        return min(filter(lambda word: len(word) == len(longest_word), words))
+        words = sorted(text.split(' '))
+        res = max(words, key=len)
     except:
         raise NotImplementedError
+    return res
     # END_YOUR_ANSWER
 
 ############################################################
@@ -165,7 +165,6 @@ def getFrequentWords(text, freq):
     Splits the string |text| by whitespace
     and returns a set of words that appear at a given frequency |freq|.
     """
-    
     # BEGIN_YOUR_ANSWER (our solution is 3 lines of code, but don't worry if you deviate from this)
     try:
         words = text.split(' ')
@@ -174,4 +173,4 @@ def getFrequentWords(text, freq):
     except:
         raise NotImplementedError
     return res
-    # END_YOUR_ANSWER 
+    # END_YOUR_ANSWER
