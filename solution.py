@@ -2,7 +2,7 @@ import collections
 import math
 import time
 
-SEED = time.time()
+SEED = time.time
 ############################################################
 # Problem 1a
 def denseVectorDotProduct(v1, v2):    
@@ -27,7 +27,7 @@ def incrementDenseVector(v1, scale, v2):
     """
     # BEGIN_YOUR_ANSWER (our solution is 1 lines of code, but don't worry if you deviate from this)
     try:
-        res = tuple(v1c +scale *v2c for v1c, v2c in zip(v1, v2))
+        res = list(v1c +scale *v2c for v1c, v2c in zip(v1, v2))
     except:
         raise NotImplementedError
     return res

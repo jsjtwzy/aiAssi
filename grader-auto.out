@@ -33,38 +33,25 @@ parts:
   extraCredit: false
   maxPoints: 1
   maxSeconds: 5
-  messages:
-  - Expected to be true, but got false
+  messages: []
   name: 1b-1-hidden
-  points: 0
+  points: 1
   seconds: 0
 - description: ''
   extraCredit: false
   maxPoints: 1
   maxSeconds: 5
-  messages:
-  - 'Exception thrown: <class ''NotImplementedError''> -- '
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 63, in <lambda>\n    grader.addBasicPart('1c-0-basic',\
-    \ lambda : grader.requireIsEqual(collections.defaultdict(float, {0:1, 3:2}), submission.dense2sparseVector([1,0,0,2])),\
-    \ 1)\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 54, in dense2sparseVector\n\
-    \    raise NotImplementedError\n"
+  messages: []
   name: 1c-0-basic
-  points: 0
+  points: 1
   seconds: 0
 - description: ''
   extraCredit: false
   maxPoints: 1
   maxSeconds: 5
-  messages:
-  - 'Exception thrown: <class ''NotImplementedError''> -- '
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 76, in test\n    all(get_gen())\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\grader.py\", line 70, in get_gen\n    pred\
-    \ = submission.dense2sparseVector(v)\n"
-  - "  File \"e:\\Desktop\\Ex\\aiAssi\\submission.py\", line 54, in dense2sparseVector\n\
-    \    raise NotImplementedError\n"
+  messages: []
   name: 1c-1-hidden
-  points: 0
+  points: 1
   seconds: 0
 - description: ''
   extraCredit: false
@@ -146,4 +133,4 @@ parts:
   name: 2c-1-hidden
   points: 1
   seconds: 0
-totalPoints: 13
+totalPoints: 16

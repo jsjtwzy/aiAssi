@@ -46,7 +46,7 @@ def dense2sparseVector(v):
     You might find it useful to use enumerate().
     """
     try:
-        v_sparse = collections.defaultdict(float)
+        v_sparse = collections.defaulydict(float)
         for i, v_value in enumerate(v):
             if v_value != 0:
                 v_sparse[i]=v_value
